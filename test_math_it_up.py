@@ -26,39 +26,37 @@ the mode of the numbers.
 To run the tests, run `pytest` from the command line in the same directory as
 this file.
 """
-
-def test_is_even():
+@pytest.mark.parametrize("input,expected", [(1, False), (2, True), (12341412, True), (58493, False)])
+def test_is_even(input, expected):
   """
   Tests for the `is_even` function
   """
-  assert math_it_up.is_even(1) == False
-  assert math_it_up.is_even(2) == True
-  assert math_it_up.is_even(12341412) == True
-  assert math_it_up.is_even(58493) == False
+  assert math_it_up.is_even(input) == expected
 
-def test_is_odd():
+@pytest.mark.parametrize("input,expected", [(1, True), (2, False), (12341412, False), (58493, True)])
+def test_is_odd(input, expected):
   """
   Tests for the `is_odd` function
   """
-  assert math_it_up.is_odd(1) == True
-  assert math_it_up.is_odd(2) == False
-  assert math_it_up.is_odd(12341412) == False
-  assert math_it_up.is_odd(58493) == True
+  assert math_it_up.is_odd(input) == expected
 
-def test_mean():
+@pytest.mark.parametrize("input,expected", [([1, 2, 3], 2), ([20, 40, 60], 40), ([1, 55, 23, 72, 33, 324], 84.66666666666667)])
+def test_mean(input, expected):
   """
   Tests for the `mean` function
   """
-  assert math_it_up.mean([1, 2, 3]) == 2
-  assert math_it_up.mean([20, 40, 60]) == 40
-  assert math_it_up.mean([1, 55, 23, 72, 33, 324]) == 84.66666666666667
+  assert math_it_up.mean(input) == expected
 
-def test_median():
+@pytest.mark.parametrize("input,expected", [([1, 2, 3, 3, 4, 5, 6, 7, 8, 9, 10, 10, 9, 7, 6, 5, 6], 6), ([2, 3, 6, 4, 3, 7 ,13, 4,5, 6], 4.5)])
+def test_median(input, expected):
   """
   Tests for the `median` function
   """
+  assert math_it_up.median(input) == expected
 
-def test_mode():
+@pytest.mark.parametrize("input,expected", [([1, 2, 3, 3, 4, 5, 6, 7, 8, 9, 10, 10, 9, 7, 6, 5, 6], [6]), ([2, 3, 6, 4, 3, 7 ,13, 4,5, 6], [3, 6, 4])])
+def test_mode(input, expected):
   """
   Tests for the `mode` function
   """
+  assert math_it_up.mode(input) == expected
