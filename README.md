@@ -1,3 +1,4 @@
+[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=15839127)
 # Pytest Tester
 
 This is a simple project used to demonstrate and practice the use of Pytest, the Python testing framework. The project contains a set of functions that perform simple mathematical operations, and the goal is to write tests for these functions using Pytest.
@@ -11,9 +12,8 @@ For a refresher on Pytest and how it works, you can refer back to the lesson pla
 To demonstrate that you have successfully completed this project, you must meet the following criteria:
 
 1. You must have written at least one test in the `test_math_it_up.py` file for each of the functions in the `math_it_up.py` file.
-2. You must take advantage of parametrization in your tests to test multiple inputs for each function (e.g., testing both positive and negative numbers). See the lesson plan or the [Pytest documentation](https://docs.pytest.org/en/6.2.x/parametrize.html) for more information on how to do this.
-3. You must have run the tests using the Pytest framework and ensured that they all pass.
-4. You must not have modified the `math_it_up.py` file in any way.
+2. You must have run the tests using the Pytest framework and ensured that they all pass.
+3. You must not have modified the `math_it_up.py` file in any way.
 
 ## Submission
 
