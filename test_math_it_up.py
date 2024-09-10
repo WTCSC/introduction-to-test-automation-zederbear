@@ -33,7 +33,7 @@ def test_is_even():
   """
   assert math_it_up.is_even(1) == False
   assert math_it_up.is_even(2) == True
-  assert math_it_up.is_even(12341412) == True
+  assert math_it_up.is_even(-12341412) == True
   assert math_it_up.is_even(58493) == False
 
 def test_is_odd():
@@ -43,7 +43,7 @@ def test_is_odd():
   assert math_it_up.is_odd(1) == True
   assert math_it_up.is_odd(2) == False
   assert math_it_up.is_odd(12341412) == False
-  assert math_it_up.is_odd(58493) == True
+  assert math_it_up.is_odd(-58493) == True
 
 def test_mean():
   """
@@ -52,6 +52,8 @@ def test_mean():
   assert math_it_up.mean([1, 2, 3]) == 2
   assert math_it_up.mean([20, 40, 60]) == 40
   assert math_it_up.mean([1, 55, 23, 72, 33, 324]) == 84.66666666666667
+  with pytest.raises(ZeroDivisionError):
+    math_it_up.mean([])
 
 def test_median():
   """
